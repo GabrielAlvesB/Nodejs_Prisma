@@ -29,4 +29,8 @@ const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
 }
 server.use(errorHandler);
 
-server.listen(process.env.PORT);
+server.listen(process.env.PORT, ()=>{
+    console.log("Projeto Rodando na porta:");
+    
+    console.log(`http://localhost:${process.env.PORT} 🚀`)
+});
